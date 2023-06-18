@@ -1,0 +1,24 @@
+main
+	NVIC_IntEnable
+	__CC2DW
+	__FillZeros
+	GPIO_Digital_Input
+		GPIO_Config
+			GPIO_Clk_Enable
+	GPIO_Digital_Output
+		GPIO_Config
+	Lcd_Init
+		GPIO_Config
+		Delay_5500us
+		Delay_1us
+	Lcd_Cmd
+		Delay_1us
+		Delay_5500us
+		Delay_50us
+ButonKesme
+	Lcd_Cmd
+	Lcd_Out
+		Lcd_Cmd
+		Lcd_Chr_CP
+			Lcd_Cmd
+	LongWordToStr
